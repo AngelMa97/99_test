@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navNearestPlacesFragment">
+
+    <fragment
+        android:id="@+id/navNearestPlacesFragment"
+        android:name="com.ametszc.technical_test.ui.NearestPlacesFragment"
+        android:label="nearest_places_fragment"
+        tools:layout="@layout/fragment_nearest_places">
+        <action
+            android:id="@+id/action_nearestFragment_to_detailMapFragment"
+            app:destination="@id/navDetailMapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navFavoritePlacesFragment"
+        android:name="com.ametszc.technical_test.ui.FavoritePlacesFragment"
+        android:label="favorite_places_fragment"
+        tools:layout="@layout/fragment_favorite_places">
+        <action
+            android:id="@+id/action_favoritePlacesFragment_to_detailMapFragment"
+            app:destination="@id/navDetailMapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navDetailMapFragment"
+        android:name="com.ametszc.technical_test.ui.DetailMapFragment"
+        android:label="detail_map_fragment"
+        tools:layout="@layout/fragment_detail_map" />
+
+</navigation>

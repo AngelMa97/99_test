@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nearest places</string>
+    <string name="places_list">Places</string>
+    <string name="favorite_places">Favorites</string>
+    <string name="detail_map">Details</string>
+    <string name="permission_location_rationale_message">Location permission is required to this application</string>
+</resources>

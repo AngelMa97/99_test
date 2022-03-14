@@ -1,0 +1,92 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.5.30' apply false
+}
+
+ext {
+    //SDK
+    minSdkVersion = 26
+    targetSdkVersion = 31
+    versionCode = 1
+    versionName = "1.0"
+
+    //Versions
+    livedata = "2.2.0"
+    coreKtx = "1.7.0"
+    appCompat = "1.4.1"
+    material = "1.5.0"
+    constraintLayout = "2.1.3"
+    jUnitVersion = "4.13.2"
+    jUnitExt = "1.1.3"
+    expresso = "3.4.0"
+    navVersion = "2.4.1"
+    retrofitVersion = '2.9.0'
+    rxAndroidVersion = '2.1.1'
+    rxJavaVersion = '2.2.19'
+    okHttpLoggingInterceptorVersion = '4.7.2'
+    reactiveStreamsVersion = '2.2.0'
+    easyPermissions = "1.0.0"
+    placesVersion = "2.5.0"
+    mapsVersion = "3.2.1"
+
+    //Jetpack
+    livedataLib = "androidx.lifecycle:lifecycle-livedata-ktx:$livedata"
+    viewmodelLib = "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata"
+
+    //View
+    constraintLayoutLib = "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    coreKtxLib = "androidx.core:core-ktx:$coreKtx"
+    appCompatLib = "androidx.appcompat:appcompat:$appCompat"
+
+    //Material
+    materialLib = "com.google.android.material:material:$material"
+
+    //testing
+    jUnitLib = "junit:junit:$jUnitVersion"
+    jUnitExtLib = "androidx.test.ext:junit:$jUnitExt"
+    expressoLib = "androidx.test.espresso:espresso-core:$expresso"
+
+    //Navigation
+    navFragment = "androidx.navigation:navigation-fragment-ktx:$navVersion"
+    navUi = "androidx.navigation:navigation-ui-ktx:$navVersion"
+
+    //Retrofit
+    retrofitGsonLib = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    retrofitRxJavaLib = "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    //Rx
+    rxAndroidLib = "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    rxJavaLib = "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    //OkHttp
+    okHttpInterceptorLib = "com.squareup.okhttp3:logging-interceptor:$okHttpLoggingInterceptorVersion"
+
+    //Reactive Streams
+    reactiveStreamsLib = "androidx.lifecycle:lifecycle-reactivestreams-ktx:$reactiveStreamsVersion"
+
+    //EasyPermissions
+    easyPermissionsLib = "com.vmadalin:easypermissions-ktx:$easyPermissions"
+
+    //Places
+    placesLib = "com.google.android.libraries.places:places:$placesVersion"
+
+    //Maps
+    mapsLib = "com.google.maps:google-maps-services:0.11.0"
+    //mapsLib = "com.google.maps.android:maps-ktx:$mapsVersion"
+    //mapsUtil = "com.google.maps.android:maps-utils-ktx:$mapsVersion"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

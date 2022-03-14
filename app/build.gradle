@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk rootProject.targetSdkVersion
+
+    defaultConfig {
+        applicationId "com.ametszc.technical_test"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    //Project
+    implementation project(":data")
+    implementation project(":domain")
+    implementation project(":useCases")
+    implementation project(":framework:nearplaces")
+
+    //Kotlin
+    implementation coreKtxLib
+
+    //Jetpack
+    implementation livedataLib
+    implementation viewmodelLib
+
+    //Material
+    implementation materialLib
+
+    //Reactive Streams
+    implementation reactiveStreamsLib
+
+    //RxJava
+    implementation rxAndroidLib
+    implementation rxJavaLib
+
+    //View
+    implementation appCompatLib
+    implementation constraintLayoutLib
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Navigation
+    implementation navFragment
+    implementation navUi
+
+    //Testing
+    testImplementation jUnitLib
+    testImplementation jUnitExtLib
+    testImplementation expressoLib
+
+    //EasyPermission
+    implementation easyPermissionsLib
+
+    //Places
+    implementation placesLib
+
+    //Maps
+    implementation mapsLib
+}

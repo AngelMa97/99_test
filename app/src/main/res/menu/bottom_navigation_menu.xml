@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/places_list"
+        android:icon="@drawable/ic_places_list"
+        android:title="@string/places_list"/>
+    <item
+        android:id="@+id/favorite_places"
+        android:icon="@drawable/ic_favorite_places"
+        android:title="@string/favorite_places" />
+</menu>
